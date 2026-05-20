@@ -259,17 +259,6 @@ git push origin main
 
 ---
 
-# Task Assignment Example
-
-| Intern | Task |
-|---|---|
-| Intern 1 | Header/Navbar |
-| Intern 2 | Hero Section |
-| Intern 3 | Footer |
-| Intern 4 | Responsive Design |
-
----
-
 # Learning Goals
 
 By completing this project, interns will learn:
