@@ -7,7 +7,7 @@ This project is designed for interns to learn:
 - CSS styling
 - Project structure
 - Git & GitHub workflow
-- Team collaboration using Fork & Pull Request (PR)
+- Team collaboration
 
 ---
 
@@ -39,103 +39,81 @@ internship-project-1/
 
 ---
 
-# Team Workflow (Fork-Based)
+# Team Workflow (Template-Based)
 
-Each intern must **fork the repository**, work in their own branch, and create a **Pull Request (PR)**.
+Each intern must create their **own repository using this template**, complete the assignment, and share the repository link.
 
 ---
 
-## Step 1: Fork the Repository
+## Step 1: Create Repository from Template
 
 1. Open the main repository.
-2. Click the **Fork** button on GitHub.
+2. Click **Use this template** (top right).
+3. Select **Create a new repository**.
 
-This creates your own copy of the repository.
+Choose:
+
+```txt
+Repository Name:
+internship-project-your-name
+```
 
 Example:
 
 ```txt
-Original Repo:
-https://github.com/company/internship-project-1
-
-Your Fork:
-https://github.com/your-username/internship-project-1
+internship-project-john
+internship-project-arun
+internship-project-megha
 ```
+
+Click:
+
+```txt
+Create repository
+```
+
+This creates your own copy of the project.
 
 ---
 
-## Step 2: Clone Your Fork
+## Step 2: Clone Your Repository
 
 Open terminal and run:
 
 ```bash
-git clone https://github.com/your-username/internship-project-1.git
+git clone https://github.com/your-username/your-repo-name.git
 ```
 
 Move into project folder:
 
 ```bash
-cd internship-project-1
+cd your-repo-name
+```
+
+Example:
+
+```bash
+cd internship-project-john
 ```
 
 ---
 
-## Step 3: Add Upstream Repository
-
-Add the original repository to receive updates.
-
-```bash
-git remote add upstream https://github.com/original-owner/internship-project-1.git
-```
-
-Verify remotes:
-
-```bash
-git remote -v
-```
-
-Expected output:
-
-```txt
-origin    https://github.com/your-username/internship-project-1.git
-upstream  https://github.com/original-owner/internship-project-1.git
-```
-
----
-
-## Step 4: Create a New Branch
-
-Never work directly on `main`.
-
-Create a feature branch:
-
-```bash
-git checkout -b feature-header
-```
-
-Examples:
-
-```txt
-feature-header
-feature-navbar
-feature-footer
-feature-responsive-ui
-```
-
----
-
-## Step 5: Start Development
+## Step 3: Start Development
 
 Edit:
 
 - `index.html`
 - `style.css`
 
-Add images inside:
+Add assets inside:
 
 ```txt
 assets/images/
+assets/icons/
+assets/fonts/
 ```
+
+Download required assets from **Figma** and place them in the correct folder.
 
 Example HTML:
 
@@ -151,7 +129,7 @@ Example Image:
 
 ---
 
-## Step 6: Commit Your Changes
+## Step 4: Commit Your Changes
 
 Check modified files:
 
@@ -168,7 +146,7 @@ git add .
 Commit changes:
 
 ```bash
-git commit -m "Added responsive navbar"
+git commit -m "Completed homepage design"
 ```
 
 Use meaningful commit messages.
@@ -177,70 +155,16 @@ Good examples:
 
 ```txt
 Added homepage hero section
-Fixed navbar alignment
+Implemented navbar design
+Completed responsive layout
 Updated footer styling
-Improved responsive layout
 ```
 
 ---
 
-## Step 7: Push Code to Your Fork
+## Step 5: Push Code to GitHub
 
-Push branch to GitHub:
-
-```bash
-git push origin feature-header
-```
-
----
-
-## Step 8: Create Pull Request (PR)
-
-1. Open your fork on GitHub.
-2. Click **Compare & Pull Request**.
-3. Add title and description.
-4. Submit PR to:
-
-```txt
-original-repo/main
-```
-
-Example title:
-
-```txt
-Added responsive header section
-```
-
----
-
-## Step 9: Review & Merge
-
-Project maintainer will:
-
-- Review code
-- Suggest improvements
-- Approve PR
-- Merge into `main`
-
----
-
-## Step 10: Update Your Fork
-
-Before starting new work:
-
-Switch to main branch:
-
-```bash
-git checkout main
-```
-
-Get latest changes:
-
-```bash
-git pull upstream main
-```
-
-Push updated code to your fork:
+Push your work:
 
 ```bash
 git push origin main
@@ -248,14 +172,79 @@ git push origin main
 
 ---
 
+## Step 6: Share Repository
+
+After completing the assignment:
+
+1. Push all code to GitHub.
+2. Share your repository link with the team/mentor.
+
+Example:
+
+```txt
+https://github.com/your-username/internship-project-john
+```
+
+---
+
 # Rules for Interns
 
-✅ Always create a new branch  
-✅ Use meaningful commit messages  
+✅ Use the provided template repository  
 ✅ Keep code clean and readable  
-✅ Avoid editing another intern’s work without discussion  
-✅ Test your UI before pushing code  
-❌ Never push directly to `main`
+✅ Use proper file names for assets  
+✅ Push code regularly  
+✅ Test UI before submitting  
+❌ Do not delete project structure
+
+---
+
+# Asset Guidelines
+
+### Images
+
+Store inside:
+
+```txt
+assets/images/
+```
+
+Examples:
+
+```txt
+logo.png
+banner.jpg
+hero-image.webp
+```
+
+### Icons
+
+Store inside:
+
+```txt
+assets/icons/
+```
+
+Preferred format:
+
+```txt
+SVG
+```
+
+### Fonts
+
+Store inside:
+
+```txt
+assets/fonts/
+```
+
+Supported formats:
+
+```txt
+WOFF2
+TTF
+OTF
+```
 
 ---
 
@@ -263,41 +252,40 @@ git push origin main
 
 By completing this project, interns will learn:
 
-- HTML page structure
+- HTML structure
 - CSS styling
-- Responsive design basics
+- Responsive UI basics
 - Git commands
-- GitHub workflow
-- Branching strategy
-- Pull Requests
-- Team collaboration
+- GitHub repository management
+- Clean project organization
+- Working with Figma assets
 
 ---
 
 ## Useful Git Commands
 
-### Check branch
+### Check changes
 
 ```bash
-git branch
+git status
 ```
 
-### Switch branch
+### Add files
 
 ```bash
-git checkout branch-name
+git add .
 ```
 
-### Pull latest changes
+### Commit changes
 
 ```bash
-git pull upstream main
+git commit -m "your message"
 ```
 
 ### Push code
 
 ```bash
-git push origin branch-name
+git push origin main
 ```
 
 ---
